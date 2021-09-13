@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { IncomeComponent } from '../income/income.component';
-import { InvestmentsComponent } from '../investments/investments.component';
-import { LoansComponent } from '../loans/loans.component';
-import { OutcomeComponent } from '../outcome/outcome.component';
 import { ListPageComponent } from './list-page.component';
+import { TabComponent } from '../tab/tab.component';
+import { TabDetailsComponent } from '../tab-details/tab-details.component';
+
 
 const routes: Routes =[
-  { path:'', component: ListPageComponent },
-  // { path:'0', component: IncomeComponent },
-  // { path:'1', component: OutcomeComponent },
-  // { path:'2', component: LoansComponent },
-  // { path:'3', component: InvestmentsComponent },
-]
+  { path: ' ', component: ListPageComponent,
+    children: [
+      { path:' ', component: TabComponent,
+        children:[
+          { path: ' ', component: TabDetailsComponent}
+          ]
+      }
+              ]     
+  }]
+ 
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

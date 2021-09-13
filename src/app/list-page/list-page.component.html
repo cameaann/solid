@@ -1,92 +1,20 @@
 <ul class="nav nav-tabs">
-    <li class="nav-item" (click)=getTypeTab(0)>
-      <a routerLinkActive="activebutton" 
-      class="nav-link" 
-      [routerLink] = "['/navigator']" 
-      [queryParams]= '{tab: 0}'>Income</a>
-    </li>
-    <li class="nav-item" (click)=getTypeTab(1)>
-      <a routerLinkActive="activebutton"
-      class="nav-link" [routerLink] = "['/navigator']" 
-      [queryParams]= '{tab: 1}'>Outcome</a>
-    </li>
-    <li class="nav-item" (click)=getTypeTab(2)>
-      <a routerLinkActive="activebutton"
-      class="nav-link" [routerLink] = "['/navigator']" 
-      [queryParams]= '{tab: 2}'>Loans</a>
-    </li>
-    <li  class="nav-item" (click)=getTypeTab(3)>
-      <a routerLinkActive="activebutton"
-      class="nav-link" [routerLink] = "['/navigator']" 
-      [queryParams]= '{tab: 3}'>Investments</a>
-    </li>
-  </ul>
-  <app-income *ngIf="typeSort=='income'"></app-income>
-  <app-outcome *ngIf="typeSort=='outcome'"></app-outcome>
-  <app-loans *ngIf="typeSort=='loan'"></app-loans>
-  <app-investments *ngIf="typeSort=='investment'"></app-investments>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <pre>Active: {{ active }}</pre>
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
-    <li [ngbNavItem]="0" [destroyOnHide]="true">
-       
-        <a class="nav-link active" [routerLink] = "['/navigator']" [queryParams]= '{tab: 0}'>Income</a> -->
-        <!-- <ng-template ngbNavContent> -->
-            <!-- <app-tab *ngFor = "let person of sortPeople" [person]="person" ></app-tab> -->
-           <!-- <div>income</div>
-        </ng-template>
-
-    </li>
-    <li [ngbNavItem]="1">
-    
-        <a class="nav-link" [routerLink] = "['/navigator']" [queryParams]= '{tab: 1}' >Outcome</a>
-        <ng-template ngbNavContent> -->
-            <!-- <app-tab *ngFor = "let person of sortPeople" [person]="person" ></app-tab> -->
-           <!-- <div>outcome</div>
-        </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-       
-        <a class="nav-link" [routerLink] = "['/navigator']" [queryParams]= '{tab: 2}'>Loans</a>
-
-        <ng-template ngbNavContent>
-            <div>loans</div> -->
-            <!-- <app-tab *ngFor = "let person of people" [person]="person" ></app-tab> -->
-        <!-- </ng-template>
-    </li>
-    <li [ngbNavItem]="3">
-        <a ngbNavLink routerLink="/navigator" queryParams = "{tab:3}" >Investments</a> -->
-        <!-- <a class="nav-link" [routerLink] = "['/navigator']" [queryParams]= '{tab: 3}' >Investments</a> -->
-        <!-- <ng-template ngbNavContent>
-            <div>Investments</div> -->
-            <!-- <app-tab *ngFor = "let person of sortPeople" [person]="person" ></app-tab> -->
-        <!-- </ng-template>
-    </li>
+  <li class="nav-item">
+    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
+      [queryParams]='{tab: 0}'>Income</a>
+  </li>
+  <li class="nav-item">
+    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
+      [queryParams]='{tab: 1}'>Outcome</a>
+  </li>
+  <li class="nav-item">
+    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
+      [queryParams]='{tab: 2}'>Loans</a>
+  </li>
+  <li class="nav-item">
+    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
+      [queryParams]='{tab: 3}'>Investments</a>
+  </li>
 </ul>
 
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-<app-tab *ngFor = "let person of people" [person]="person"></app-tab> -->
-
+<app-tab></app-tab>
