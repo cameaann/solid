@@ -1,10 +1,4 @@
-<table class="table">
-  <thead>
-  <tr>
-    <th scope="col">Name</th>
-    <th scope="col">Acount</th>
-  </tr>
-  </thead>
-  <tr><app-tab-details *ngFor="let person of sortedPeople" [person]='person'></app-tab-details>
-  </tr>
-</table>
+<div [hidden]="!active" class="pane">
+  <ng-content></ng-content>
+</div>
+

@@ -1,20 +1,14 @@
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
-      [queryParams]='{tab: 0}'>Income</a>
-  </li>
-  <li class="nav-item">
-    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
-      [queryParams]='{tab: 1}'>Outcome</a>
-  </li>
-  <li class="nav-item">
-    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
-      [queryParams]='{tab: 2}'>Loans</a>
-  </li>
-  <li class="nav-item">
-    <a routerLinkActive="activebutton" class="nav-link" [routerLink]="['/navigator']"
-      [queryParams]='{tab: 3}'>Investments</a>
-  </li>
-</ul>
-
-<app-tab></app-tab>
+<tabs>
+  <tab [name]="'Incomes'" [id]='0'>
+    <app-item-list filter="income"></app-item-list>
+  </tab>  
+  <tab [name]="'Outcomes'" [id]='1'>
+    <app-item-list filter="outcome"></app-item-list>
+  </tab>
+  <tab [name]="'Loans'" [id]='0'>
+    <app-item-list filter="loan"></app-item-list>
+  </tab>  
+  <tab [name]="'Investments'" [id]='1'>
+    <app-item-list filter="investment"></app-item-list>
+  </tab>
+</tabs>

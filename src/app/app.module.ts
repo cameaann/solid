@@ -9,12 +9,11 @@ import { RouterModule } from '@angular/router';
 import { ListPageModule } from './list-page/list-page.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
-    HeaderComponent  
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

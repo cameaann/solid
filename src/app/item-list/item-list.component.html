@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+      </tr>
+      </thead>
+        <tbody>
+          <tr *ngFor="let person of sortedPeople">
+            <td class="align-middle">{{ person.name.first }}&nbsp;&nbsp;{{person.name.last}}</td>
+            <td class="align-middle">{{ person.type }}</td>
+          </tr>
+          </tbody>
+      </table>
+    
+  </div>
+  

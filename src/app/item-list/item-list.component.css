@@ -1,0 +1,12 @@
+.table{
+    width: 50%;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media (min-width: 1200px) { 
+    .table{
+        width:50%;
+    }
+ }
