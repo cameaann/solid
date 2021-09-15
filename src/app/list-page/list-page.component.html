@@ -1,14 +1,17 @@
-<tabs>
-  <tab [name]="'Incomes'" [id]='0'>
-    <app-item-list filter="income"></app-item-list>
-  </tab>  
-  <tab [name]="'Outcomes'" [id]='1'>
-    <app-item-list filter="outcome"></app-item-list>
-  </tab>
-  <tab [name]="'Loans'" [id]='0'>
-    <app-item-list filter="loan"></app-item-list>
-  </tab>  
-  <tab [name]="'Investments'" [id]='1'>
-    <app-item-list filter="investment"></app-item-list>
-  </tab>
-</tabs>
+<div class="container">
+  <tabs>
+    <tab [name]="'Incomes'" [id]='0'>
+      <app-item-list filter="income"></app-item-list>
+    </tab>  
+    <tab [name]="'Outcomes'" [id]='1'>
+      <app-item-list filter="outcome"></app-item-list>
+    </tab>
+    <tab [name]="'Loans'" [id]='2'>
+      <app-item-list filter="loan"></app-item-list>
+    </tab>  
+    <tab [name]="'Investments'" [id]='3'>
+      <app-item-list filter="investment"></app-item-list>
+    </tab>
+  </tabs>
+</div>
+

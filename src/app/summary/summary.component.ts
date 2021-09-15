@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,13 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
+  
+  constructor(private router: Router, private tabService: TabService) { }
+  ngOnInit(): void {}
 
-  constructor(private router: Router) { }
-  ngOnInit(): void {
+  goToTab(val:number){
+    this.tabService.setTab(val);
+    this.router.navigate(['/navigator'], { queryParams: { tab: val }});
   }
 
-  goToListPage(){
-    this.router.navigate(['/navigator'], { queryParams: { tab: '1' }});
+  onCardClicked(e:number){
+    this.goToTab(e);
   }
 
 }

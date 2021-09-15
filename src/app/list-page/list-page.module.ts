@@ -7,6 +7,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "../app-routing.module";
 import { RouterModule } from "@angular/router";
 import { ItemListComponent } from "../item-list/item-list.component";
+import { TabService } from "../tab.service";
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { ItemListComponent } from "../item-list/item-list.component";
       RouterModule
     ],
     exports:[
-    ]
+    ],
+    providers:[TabService]
   })
 export class ListPageModule {}

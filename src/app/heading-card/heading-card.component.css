@@ -1,0 +1,12 @@
+.card{
+    border: 2px solid rgb(173, 171, 171);    
+}
+.card-header{
+    padding-top:2.5rem;
+  }
+
+.card-body{
+    border-bottom: 2px solid rgb(173, 171, 171);
+    border-top: 2px solid rgb(173, 171, 171);
+    padding: 2rem;
+}

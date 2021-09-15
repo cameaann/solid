@@ -1,4 +1,14 @@
-<p>summary works!</p>
-<div class="container header">
-    <button type="button" (click)="goToListPage()" class="btn btn-light">List Page</button>
+<div class="container card-container">
+    <heading-card></heading-card>
+    <div class="cards">
+        <div class="row">
+            <card [cardTitle]="'Income'" [cardText]="'123'" [tabId]='0' (cardClicked)="onCardClicked($event)"></card>
+            <card [cardTitle]="'Outcome'" [cardText]="'345'" [tabId]='1' (cardClicked)="onCardClicked($event)"></card>
+        </div>
+        <div class="row">
+            <card [cardTitle]="'Loans'" [cardText]="'345'" [tabId]='2' (cardClicked)="onCardClicked($event)"></card>
+            <card [cardTitle]="'Investments'" [cardText]="'234'" [tabId]='3' (cardClicked)="onCardClicked($event)"></card>
+        </div>
+    </div>    
 </div>
+

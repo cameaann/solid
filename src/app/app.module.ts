@@ -7,13 +7,18 @@ import { SummaryComponent } from './summary/summary.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { ListPageModule } from './list-page/list-page.module';
+import { TabService } from './tab.service';
+import { HeadingCardComponent } from './heading-card/heading-card.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
-    HeaderComponent
+    HeaderComponent,
+    HeadingCardComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,7 @@ import { ListPageModule } from './list-page/list-page.module';
     RouterModule,
     ListPageModule
   ],
-  providers: [],
+  providers: [TabService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

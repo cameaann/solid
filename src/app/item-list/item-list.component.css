@@ -1,12 +1,15 @@
 .table{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     vertical-align: middle;
     text-align: center;
 }
+.table thead th {
+    border-top: none;
+}
 
 @media (min-width: 1200px) { 
     .table{
-        width:50%;
+        width:60%;
     }
  }

@@ -1,5 +1,7 @@
 import { Component, ContentChild, Input, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ItemListComponent } from '../item-list/item-list.component';
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'tab',
@@ -11,9 +13,8 @@ export class TabComponent implements OnInit {
   @Input()id: number = 0;
   @Input() active = false;
 
-  // tab!: TabComponent;
  @ContentChild(ItemListComponent) tabs!:ItemListComponent;
-  constructor(){    
+  constructor(private tabService: TabService){    
   }
   
   ngOnInit(): void {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'app-list-page',
@@ -8,19 +8,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./list-page.component.css']
 })
 
-export class ListPageComponent implements OnInit {  
-  private querySubscription = new Subscription();
-  tab=0;
-  constructor(private route: ActivatedRoute) { }
+export class ListPageComponent implements OnInit {
+
+  constructor(private route: ActivatedRoute, private tabService: TabService) { }
 
   ngOnInit(): void {
-    this.querySubscription = this.route.queryParams.subscribe(
-          (queryParam: any) => {
-            this.tab = queryParam['tab'];   
-            console.log(this.tab)
-        
-        }
-        );
+    
   }
-
 }
+  

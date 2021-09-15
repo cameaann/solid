@@ -1,0 +1,12 @@
+.card{
+    min-width:20rem;
+}
+.c-flex{
+    display: flex;
+    flex-direction: column;
+}
+.card-button{
+    align-self: self-end;
+    width: 10rem;
+}
+

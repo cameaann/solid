@@ -1,0 +1,18 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    max-width:900px;
+    justify-content: center;
+}
+.cards{
+    margin: 2rem 0;
+    gap: 2rem; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+.row{
+   gap: 2rem;
+   justify-content: center;
+}
